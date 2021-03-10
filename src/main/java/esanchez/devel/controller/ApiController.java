@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import esanchez.devel.entity.Car;
@@ -28,7 +28,7 @@ public class ApiController {
 	 * the cars are inserted with person_id=null because the person is
 	 * still not saved in database.
 	 */
-	@GetMapping("/oneToMany")
+	@PostMapping("/oneToMany")
 	public ResponseEntity<?> save(Model model) {
 		
 		Person person = new Person();
